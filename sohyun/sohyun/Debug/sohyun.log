@@ -1,6 +1,0 @@
-﻿  sohyun.cpp
-  크레인인형뽑기.cpp
-D:\Project\sohyun\sohyun\크레인인형뽑기.cpp(11,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\Project\sohyun\sohyun\크레인인형뽑기.cpp(12,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  코드를 생성하고 있습니다...
-  sohyun.vcxproj -> D:\Project\sohyun\Debug\sohyun.exe
