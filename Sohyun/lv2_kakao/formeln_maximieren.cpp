@@ -18,13 +18,13 @@ long long calPriority(vector<string> num, string operation) {
             it = find(num.begin(),num.end(),findoper);
             if(it != num.end()){
                 if(findoper=="+")
-                    temp = to_string(stoi(*(it-1)) + stoi(*(it+1)));
+                    temp = to_string(stoll(*(it-1)) + stoll(*(it+1)));
                 else if(findoper=="*")
-                    temp = to_string(stoi(*(it-1)) * stoi(*(it+1)));
+                    temp = to_string(stoll(*(it-1)) * stoll(*(it+1)));
                 else if(findoper=="-")
-                    temp = to_string(stoi(*(it-1)) - stoi(*(it+1)));
+                    temp = to_string(stoll(*(it-1)) - stoll(*(it+1)));
 
-                it = num.erase(it-1); //it¿¡ ±×´ÙÀ½²¨ °¡¸®Å°´Â iterator´ëÀÔµÊ
+                it = num.erase(it-1); //itì— ê·¸ë‹¤ìŒêº¼ ê°€ë¦¬í‚¤ëŠ” iteratorëŒ€ì…ë¨
                 it = num.erase(it); 
                 it = num.erase(it); 
 
@@ -33,7 +33,7 @@ long long calPriority(vector<string> num, string operation) {
             num.insert(it,temp);
         }
     }
-    return abs(stoi(num.front()));
+    return abs(stoll(num.front()));
 }
 
 long long solution(string expression) {
