@@ -1,0 +1,26 @@
+from collections import deque
+import bisect
+import heapq
+
+
+tc = int(input())
+
+
+
+for i in range(tc):
+    input_list = list(map(int, input().split()))
+    query_list = list(map(int, input().split()))
+    
+    result = []
+    
+    for i in range(len(query_list)):
+        bi = bisect.bisect_left(input_list, query_list[i])
+        if bi != len(input_list) and input_list[bi]==query_list[i]:
+            result.append(bisect.bisect_left(input_list, query_list[i]))
+        else:
+            result.append(-1)
+        
+
+    
+    print(*result)
+        
